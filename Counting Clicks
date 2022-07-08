@@ -1,0 +1,81 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MaterialApp(home: MyApp()));
+}
+
+class MyApp extends StatefulWidget {
+  MyApp({Key? key}) : super(key: key);
+
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  int total = 0;
+  int leftClicks = 0;
+  int rightClicks = 0;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        body: SafeArea(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: [
+          Container(
+            color: Colors.yellow,
+            padding: EdgeInsets.all(20),
+            child: Text(total.toString()),
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              cardWithButton(
+                leftClicks,
+                onPressed: () {
+                  total++;
+                  leftClicks++;
+                  setState(() {});
+                },
+              ),
+              SizedBox(
+                width: 50,
+              ),
+              cardWithButton(
+                rightClicks,
+                onPressed: () {
+                  total++;
+                  rightClicks++;
+                  setState(() {});
+                },
+              ),
+            ],
+          ),
+        ],
+      ),
+    ));
+  }
+}
+
+Widget cardWithButton(int clicks, {required void onPressed()}) {
+  return Container(
+    padding: EdgeInsets.only(
+      left: 40,
+      right: 40,
+      top: 20,
+      bottom: 10,
+    ),
+    color: Colors.yellow,
+    child: Column(
+      children: [
+        Text(clicks.toString()),
+        SizedBox(height: 40),
+        ElevatedButton(
+          child: Icon(Icons.add),
+          onPressed: onPressed,
+        ),
+      ],
+    ),
+  );
+}
