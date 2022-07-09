@@ -1,0 +1,115 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(
+    MaterialApp(
+      home: Scaffold(
+        body: SafeArea(
+          child: Column(
+            children: [
+              SizedBox(
+                height: 20,
+              ),
+              Container(
+                padding: EdgeInsets.symmetric(horizontal: 22, vertical: 10),
+                width: double.infinity,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text("23/05/22"),
+                        Text(" "),
+                        Text("Fetch milk from the market"),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Text("Monday"),
+                      ],
+                    ),
+                  ],
+                ),
+                margin: EdgeInsets.symmetric(horizontal: 10.0),
+                height:
+                    70, //initially used 65 but the content was overflowing by 5 pixels so changed it to 70
+                decoration: BoxDecoration(
+                  color: Colors.teal,
+                  borderRadius: BorderRadius.circular(30.0),
+                  border: Border.all(color: Colors.yellow),
+                ),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              Container(
+                padding: EdgeInsets.symmetric(horizontal: 22, vertical: 10),
+                width: double.infinity,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text("24/05/22"),
+                        Text(" "),
+                        Text("Pay electricity bills"),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Text("Tuesday"),
+                      ],
+                    ),
+                  ],
+                ),
+                margin: EdgeInsets.symmetric(horizontal: 10.0),
+                height:
+                    70, //initially used 65 but the content was overflowing by 5 pixels so changed it to 70
+                decoration: BoxDecoration(
+                  color: Colors.teal,
+                  borderRadius: BorderRadius.circular(30.0),
+                  border: Border.all(color: Colors.yellow),
+                ),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              Container(
+                padding: EdgeInsets.symmetric(horizontal: 22, vertical: 10),
+                width: double.infinity,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text("24/05/22"),
+                        Text(" "),
+                        Text("Complete flutter assignment"),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Text("Tuesday"),
+                      ],
+                    ),
+                  ],
+                ),
+                margin: EdgeInsets.symmetric(horizontal: 10.0),
+                height:
+                    70, //initially used 65 but the content was overflowing by 5 pixels so changed it to 70
+                decoration: BoxDecoration(
+                  color: Colors.teal,
+                  borderRadius: BorderRadius.circular(30.0),
+                  border: Border.all(color: Colors.yellow),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    ),
+  );
+}
